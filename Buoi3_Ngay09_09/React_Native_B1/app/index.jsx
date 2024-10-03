@@ -1,66 +1,19 @@
-import { Image, StyleSheet, Platform, View, Text, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
+import { Link } from 'expo-router';
 
-export default function HomeScreen() {
+
+
+export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={{}}>
-        <View style={styles.circle}></View>
-      </View>
-      <View>
-        <Text style={styles.title}>GROW</Text>
-        <Text style={styles.title}>YOUR BUSINESS</Text>
-      </View>
-      <View>
-        <Text style={styles.description}>We will help you to grow your business using</Text>
-        <Text style={styles.description}>online server</Text>
-      </View>
-      <View style={{display:'flex',flexDirection:'row', width:'100%', justifyContent:'space-around'}}>
-        <TouchableOpacity style={styles.btn}>
-          <Text style={styles.description}>LOGIN</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btn}>
-          <Text style={styles.description}>SIGN UP</Text>
-        </TouchableOpacity>
-      </View>
+    <View>
+      <Link href="/Screen1">Link 1</Link>
+      <Link href="/Screen2">Link 2</Link>
+      <Link href="/Screen3">Link 3</Link>
+      <Link href="/Screen4">Link 4</Link>
+      <Link href="/Screen5">Link 5</Link>
+      <Link href="/Screen6">Link 6</Link>
+      <Link href="/Screen7">Link 7</Link>
+      <Link href="/Screen8">Link 8</Link>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container:{
-    backgroundColor: '#00CCF9',
-    width: '100%',
-    height: '100%',
-    alignItems:'center',
-    justifyContent:'space-around'
-  },
-  circle:{
-    height:150,
-    width:150,
-    borderColor:'black',
-    borderRadius:75,
-    borderWidth:15,
-    
-  },
-  title:{
-    textAlign:'center',
-    fontSize:24,
-    fontWeight:'bold',
-  },
-  description:{
-    textAlign:'center',
-    fontSize:16,
-    fontWeight:'bold'
-  },
-  btn:{
-    
-    
-    width:119,
-    height:48,
-    backgroundColor:'#E3C000',
-    borderRadius:14,
-    alignItems:'center',
-    justifyContent:'center',
-
-  }
-});
