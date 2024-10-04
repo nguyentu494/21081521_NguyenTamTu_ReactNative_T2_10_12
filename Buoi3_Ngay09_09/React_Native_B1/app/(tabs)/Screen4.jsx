@@ -14,6 +14,18 @@ const Screen4 = () => {
             end={{ x: 0, y: 1 }}
             locations={[0.5, 0.85, 0.95]}
         >
+            <TouchableOpacity style={{width:50,height:30,
+                    backgroundColor:'gray', 
+                    borderRadius:4,
+                    justifyContent:'center',
+                    alignItems:'center',
+                    marginTop:12,
+                    marginLeft:8
+                }} onPress={()=>{router.back()}}>
+                    <Text style={{color:'white'}}>
+                        Home
+                    </Text>
+            </TouchableOpacity>
             <View
                 style={{
                     flex: 2,

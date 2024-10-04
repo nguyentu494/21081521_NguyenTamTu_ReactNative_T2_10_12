@@ -13,6 +13,18 @@ const Screen5 = () => {
         // alignItems:'center'
       }}
     >
+      <TouchableOpacity style={{width:50,height:30,
+                    backgroundColor:'gray', 
+                    borderRadius:4,
+                    justifyContent:'center',
+                    alignItems:'center',
+                    marginTop:12,
+                    marginLeft:8
+                }} onPress={()=>{router.back()}}>
+                    <Text style={{color:'white'}}>
+                        Home
+                    </Text>
+      </TouchableOpacity>
       <View>
         <Text style={{textAlign:'center', fontWeight:'bold', fontSize:24}}>LOGIN</Text>
       </View>
