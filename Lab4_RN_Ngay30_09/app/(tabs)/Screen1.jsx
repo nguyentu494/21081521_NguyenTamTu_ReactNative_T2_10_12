@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 import { router } from 'expo-router';
 import index from '../index';
-
 import ComButton from '../../components/ComButton';
 
 
