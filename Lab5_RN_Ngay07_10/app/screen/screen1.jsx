@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View,TextInput } from 'react-native';
 import { useEffect, useState } from 'react';
-import screen2 from './screen2'
+import screen2 from './Screen2'
 
 export default function screen1({ navigation}) {
   return (

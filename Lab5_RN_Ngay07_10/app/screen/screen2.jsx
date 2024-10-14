@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   FlatList,
   SafeAreaView,
@@ -10,7 +10,7 @@ import {
   Image,
 } from 'react-native';
 import { router } from 'expo-router';
-import index from './screen1'
+import index from './Screen1'
 
 
 const Item = ({item, onPress, backgroundColor, textColor}) => (
@@ -24,32 +24,29 @@ const Item = ({item, onPress, backgroundColor, textColor}) => (
   </View>
 );
 
+
+
 const App = () => {
-  const [DATA, setDATA] = useState(() => {
-    fetch('https://6458b0cb4eb3f674df7a6ab2.mockapi.io/user')
-    .then(res=>res.json())
-    .then(data=>{
-        setDATA(data)
-        
-    })
-  })
+
+  const [DATA, setDATA] = useState([])
   const [selectedId, setSelectedId] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
 
   const user = {
     "id" : 8,
-    "subject":"a++"
+    "subject":"r++"
   }
-
-  useEffect = (() =>{
-    fetch('https://6458b0cb4eb3f674df7a6ab2.mockapi.io/user')
-    .then(res=>res.json())
-    .then(data=>{
-        setDATA(data)
-        
-    })
+  
+  useEffect(() =>{
+    setTimeout(() => {
+      console.log("Loading")
+      fetch('https://6458b0cb4eb3f674df7a6ab2.mockapi.io/user')
+      .then((response) => response.json())
+      .then((json) => setDATA(json))
+    },2000)
   }, [isLoading])
+
 
   const add = () =>{
     setIsLoading(true)

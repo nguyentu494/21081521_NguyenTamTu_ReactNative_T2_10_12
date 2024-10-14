@@ -3,8 +3,8 @@ import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import screen1 from './screen/screen1'
-import screen2 from './screen/screen2'
+import screen1 from './screen/Screen1'
+import screen2 from './screen/Screen2'
 
 const Stack = createNativeStackNavigator();
 
